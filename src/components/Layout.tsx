@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MembersProvider } from '../context/MembersContext';
-import '../styles/globals.css';
+
 export const metadata = { title: 'Member Directory' };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
