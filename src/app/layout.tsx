@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MembersProvider } from '../context/MembersContext';
 import '../styles/globals.css';
+import { APIStatusIndicator } from '../components/APIStatusIndicator';
 export const metadata = { title: 'Member Directory' };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700">
                 Member Directory
               </Link>
+              <APIStatusIndicator />
             </div>
           </header>
           <main className="container mx-auto px-6 py-8">{children}</main>
