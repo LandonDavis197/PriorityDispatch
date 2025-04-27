@@ -1,6 +1,7 @@
 import axios from 'axios';
 import type { RandomUserAPIResponse } from '../types/member';
 
+//This api is almost never working.  Was not working 4/25 - 4/27 for me
 const client = axios.create({
   baseURL: 'https://randomuser.me/api',
 });
