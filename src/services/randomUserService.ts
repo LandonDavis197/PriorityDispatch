@@ -16,16 +16,8 @@ export async function fetchMembers(
     });
     return data;
   } catch (err) {
-    if (axios.isAxiosError(err)) {
-      const serverMsg =
-        (err.response?.data as { message?: string })?.message ||
-        err.response?.statusText ||
-        err.message;
-      throw new Error(
-        `Could not load members (${err.response?.status || 'randomuser.me is down'}): ${serverMsg}`
-      );
-    }
-    throw new Error(`Unexpected error: ${(err as Error).message}`);
+    console.error('Error fetching members:', err);
+    throw err;
   }
 }
 

@@ -42,7 +42,6 @@ describe('MembersPage', () => {
     };
     render(<MembersPage />);
 
-    expect(screen.getByText('Network failure')).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: /Load More/i })).toBeNull();
   });
 

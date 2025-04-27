@@ -24,12 +24,6 @@ export default function MembersPage() {
 
   return (
     <div>
-      {error && (
-        <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
-          {error}
-        </div>
-      )}
-
       <div className="flex flex-col md:flex-row items-center justify-between mb-6 space-y-4 md:space-y-0">
         <SearchBar value={filter} onChange={setFilter} />
         <div className="flex items-center space-x-2">
